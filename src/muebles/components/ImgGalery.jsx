@@ -1,12 +1,34 @@
+import { useEffect, useState } from "react"
+import { galeria } from "../data/galeria"
 
 
+export const ImgGalery = () => {
 
-export const ImgGalery = ({url}) => {
+const [galery, setgalery] = useState([])
+
+useEffect(() => {
+ setgalery(galeria)
+
+ 
+}, [])
+
   return (
-  <li>
-                     <a href={url} >
-                    <img src={url} alt=""/>
+<ul className="gallery">
+ {galery.map((element) => (
+   <li key={element.id}>
+                     <a href={`../assets/img/${element.image}`} >
+                    <img src={`../assets/img/${element.image}`} alt=""/>
                 </a>
             </li>
+ ))}
+ 
+</ul>
   )
+  
+
 }
+
+
+
+
+ 
