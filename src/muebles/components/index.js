@@ -1,4 +1,4 @@
 
-export *from './ImgLong'
-export *from './ImgMedium'
-export *from './ImgSmall'
+export * from './ImgCategorias'
+export * from './ImgGalery'
+export * from './Productos'
