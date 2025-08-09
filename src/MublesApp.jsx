@@ -1,25 +1,22 @@
-import { AppRouter } from "./router/AppRouter"
-import { Footer, Navbar } from "./ui/componentes"
-
-
-
+import { AppRouter } from "./router/AppRouter";
+import { Footer, Navbar } from "./ui/componentes";
 
 export const MublesApp = () => {
   return (
     <>
-    
-     <header>
-        <h1 className="name-site">Tienda <span>Muebles</span></h1>
-    </header>
+      <header>
+        <h1 className="name-site">
+          Tienda <span>Muebles</span>
+        </h1>
 
-<Navbar/>
+      </header>
+      
 
-<AppRouter/>
+      <Navbar />
 
-    
+      <AppRouter />
 
-    <Footer/>
-   
+      <Footer />
     </>
-  )
-}
+  );
+};

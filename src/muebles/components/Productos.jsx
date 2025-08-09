@@ -1,38 +1,20 @@
-
-import { useEffect, useState } from "react";
-import { productos } from "../data/productos";
 import { Link } from "react-router-dom";
 
-
-export const ImgProductos = () => {
-
-     const [producto, setProducto] = useState([]);
-     useEffect(() => {
-    setProducto(productos);
-     }, []);
+export const Productos = ({ producto }) => {
   return (
-    
-    <div className="products-list">
-
-
-  
-          {producto.map((element) => (
-            <div className="product"  key={element.id}>
-              <img 
-                     src={`../assets/img/${element.image}`}
-                     alt={element.description}/>
-                   <div className="text-product">
-                        <h3>{element.description}</h3>
-                         
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores, alias.</p>
-                        <p className="price">{element.price}</p>
-                        <Link className="btn"  to="/">
-                   Agregar al carrito
-                </Link>
-                    </div> 
-            </div>  
-          ))}
-    
-    </div>
-  )
-}
+    <article className="product">
+      <img
+        src={`/assets/img/${producto.image}`} // Asegúrate que estén en /public/assets/img
+        alt={producto.name}
+      />
+      <div className="text-product">
+        <h3>{producto.name}</h3>
+        <p>{producto.description}</p>
+        <p className="price">{producto.price}</p>
+        <Link className="btn" to="/">
+          Agregar al carrito
+        </Link>
+      </div>
+    </article>
+  );
+};
