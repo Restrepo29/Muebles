@@ -1,18 +1,18 @@
-
-import { ImgCategorias, ImgProductos } from "../components";
-
-
+import { ImgCategorias, Productos } from "../components";
+import { productos } from "../data/productos";
+import { useEffect, useState } from "react";
 
 export const Inicio = () => {
- 
+  const [producto, setProducto] = useState([]);
+
+  useEffect(() => {
+    setProducto(productos);
+  }, []);
 
   return (
     <>
-     <div className="hero"></div>
-
-     
-       <section className="container categories">
-        <ImgCategorias/>
+      <section className="container categories">
+        <ImgCategorias />
       </section>
 
       <section className="about-us">
@@ -30,14 +30,13 @@ export const Inicio = () => {
         </div>
       </section>
 
-     
-     
       <main className="content-principal container">
         <h2 className="text-center">Nuestros Productos</h2>
-        
-       
-<ImgProductos  />
-
+        <div className="products-grid">
+          {producto.map((element) => (
+            <Productos key={element.id} producto={element} />
+          ))}
+        </div>
       </main>
     </>
   );
