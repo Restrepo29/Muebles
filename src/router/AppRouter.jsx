@@ -6,6 +6,9 @@ import { Nosotros } from "../muebles/pages/Nosotros"
 import { Tienda } from "../muebles/pages/Tienda"
 import { Galeria } from "../muebles/pages/Galeria"
 import { Post } from "../muebles/pages/Post"
+import { UserProvider } from "../muebles/Context/UserProvider"
+import { Carrito } from "../muebles/pages/carrito"
+
 
 
 
@@ -13,7 +16,9 @@ import { Post } from "../muebles/pages/Post"
 export const AppRouter = () => {
   return (
     <>
-    <Routes>
+    <UserProvider>
+
+<Routes>
 
         <Route path="/" element={<Inicio />}/>
         <Route path="blog" element={<Blog />}/>
@@ -22,8 +27,12 @@ export const AppRouter = () => {
         <Route path="nosotros" element={<Nosotros />}/>
         <Route path="tienda" element={<Tienda />}/>
         <Route path="post" element={<Post />}/>
+         <Route path="cart" element={<Carrito />}/>
+        
         
     </Routes>
+    </UserProvider>
+    
     
     </>
   )

@@ -1,6 +1,10 @@
-import { NavLink } from "react-router-dom";
+import { useState } from "react";
+import { Link, NavLink } from "react-router-dom";
+
 
 export const Navbar = () => {
+
+  const [active, setactive] = useState(false)
   return (
     <>
       <nav className="navbar navbar-expand-sm navbar-dark bg-dark p-2  ">
@@ -57,12 +61,16 @@ export const Navbar = () => {
                  <NavLink
               className={({ isActive }) => `nav-link nav-link 
                         ${isActive ? "active" : ""}`}
-              to="/"
+              to="/cart"
             >
               Carrito
            
             </NavLink>
-            <img className="img-fluid" src="../../../public/carrito.png" alt="imagen carrito" />
+            <NavLink  to="">
+            <img className="img-fluid" src="../../../public/carrito.png" alt="imagen carrito" onClick={()=> setactive(!active)}/>
+            </NavLink>
+            
+            
             </div>
 
           </div>

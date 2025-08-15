@@ -1,19 +1,27 @@
+import { useContext } from "react";
 import { ImgCategorias, Productos } from "../components";
 import { productos } from "../data/productos";
 import { useEffect, useState } from "react";
 
+
+
+
+
 export const Inicio = () => {
   const [producto, setProducto] = useState([]);
 
+  
   useEffect(() => {
     setProducto(productos);
   }, []);
 
   return (
     <>
+   
       <section className="container categories">
         <ImgCategorias />
       </section>
+     
 
       <section className="about-us">
         <div className="container about-us-grid">
@@ -36,6 +44,8 @@ export const Inicio = () => {
           {producto.map((element) => (
             <Productos key={element.id} producto={element} />
           ))}
+
+       
         </div>
       </main>
     </>

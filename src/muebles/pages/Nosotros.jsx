@@ -1,11 +1,14 @@
 
 
+    
 
 export const Nosotros = () => {
   return (
     <>
    <main className="content-principal container">
         <h2 className="text-center">Sobre Nosotros</h2>
+
+
 
         <div className="content-about">
             <div className="image-about-page">

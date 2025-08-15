@@ -1,0 +1,38 @@
+
+.product-container-cart{
+    display:flex;
+    justify-content:space-around;
+    flex-wrap: wrap;
+    margin:10px;
+}
+
+.product-container-cart > img{
+height: 120px;
+width: 100px;
+text-align: center;
+}
+
+.cartTotal{
+text-align: center;
+
+}
+
+.cart-delete-product{
+    cursor:pointer;
+}
+
+.counter-button{
+    cursor: point;
+    font-weight: bold;
+}
+
+.productCart{
+    width: 70%;
+    margin:50px;
+    
+
+}
+
+p{
+    cursor: pointer;
+}

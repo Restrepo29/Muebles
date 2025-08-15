@@ -9,7 +9,7 @@ export const Footer = () => {
             <div>
                 <h3>Categorías</h3>
 
-                <nav className="footer-menu">
+                <nav className="footer-menu" >
                      <Link to="/"> Cocina </Link>
                     <Link to="/"> Oficina </Link>
                     <Link to="/"> Jardin </Link>
